@@ -1,0 +1,103 @@
+nav{
+    display : flex ;
+    width: 100% ;
+    height : 15vh ;
+    color : white  ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px ;
+    align-items: center;
+    justify-content: space-between;
+    padding : 0px ;
+    margin : 0px ;
+    position: fixed ;
+    top : 0 ;
+    background-color: rgb(17 , 20 , 23 ) ;
+}
+nav ul a {
+    cursor : pointer ;
+}
+nav ul a:hover {
+    color : rgb(107 , 211, 211) ;
+    border-bottom : 2px solid white ;
+}
+.active{
+    color : rgb(107 , 211, 211) ;
+    border-bottom : 2px solid white ;
+}
+ul{
+    display : flex ;
+    align-items :center ;
+    justify-content: space-between;
+    gap : 20px ;
+    list-style: none ;
+    padding : 20px ;
+}
+nav h1{
+    font-size: 40px;
+    background: linear-gradient(to right , rgb(0, 204, 255) , white);
+    background-clip: text ;
+    color : transparent ;
+}
+.hamburger{
+    display : flex ;
+    align-items: center;
+    justify-content: center;
+    gap : 8px ;
+    flex-direction: column;
+    display: none ;
+    
+}
+.ham{
+    width : 40px ;
+    height: 2px ;
+    background-color: aliceblue ;
+    transition: all 0.5s ;
+}
+.mobilemenu{
+    position: absolute ;
+    top: 80px ; 
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(17 , 20 , 23 , 0.476) ;
+    backdrop-filter: blur(7px) ;
+    right : 0 ;
+
+    transform : translate(100%) ;
+    flex-direction: column;
+    transition: all 0.5s ;
+    gap: 15px;
+    padding-top: 40px;
+}
+.mobilemenu li {
+    list-style: none;
+}
+.activemobile{
+    transform: translate(0%) ;
+}
+.activeham .ham:nth-child(1){
+    transform : rotate(45deg) ;
+    position: relative;
+    top : 8px ;
+
+}
+.activeham .ham:nth-child(2){
+    opacity: 0 ;
+
+}
+.activeham .ham:nth-child(3){
+    transform : rotate(-45deg) ;
+    position : relative ;
+    top : -12px ;
+
+}
+@media (max-width : 750px) {
+    .desktopmenu{
+        display : none ;
+    }
+    .hamburger{
+        display : flex ;
+    }
+}
